@@ -42,17 +42,38 @@ app.get('/variable', (req, res) => {
 	res.render("variable", {"variable": 9999});
 });
 
-app.get('/bucle', (req, res) => {
+app.get('/lista', (req, res) => {
 
 	let arreglo = 
-	{
-		
-		nombres: "Sebastián Ignacio",
-		apellidos: "Riquelme Muñoz"
+			{
+				ayudantes: [
+					"Sebastián Riquelme",
+					"Nicolás Moncada"
+				]
+			}
 
+
+	res.render("lista", {personas: arreglo});
+});
+
+
+app.get('/bucle', (req, res) => {
+
+	let arreglo = {
+		"ayudantes": 
+			[
+				{
+					nombres: "Sebastián Ignacio",
+					apellidos: "Riquelme Muñoz"
+				},
+				{
+					nombres: "Nicolás",
+					apellidos: "Moncada"
+				}
+			]	
 	}
 
-	res.render("bucle", /*{ayudante: "Sebastián Riquelme"},*/ {arreglo: arreglo});
+	res.render("bucle", {personas: arreglo});
 });
 
 /*
