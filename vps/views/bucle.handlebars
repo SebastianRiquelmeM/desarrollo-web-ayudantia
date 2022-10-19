@@ -1,5 +1,4 @@
 <h1>Funcionando</h1>
-{{#with personas.ayudantes}}
-    <h1>Ayudante</h1>
-    <h2>{{ nombres }} {{ apellidos }}</h2>
+{{#with personas}}
+    {{this.nombres}}
 {{/with}}

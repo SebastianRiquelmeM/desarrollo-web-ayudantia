@@ -26,11 +26,22 @@ app.get("/", (req, res) => {
 	res.render("login");
 });
 
+const credenciales = {
+	user: "Frez",
+	password: "minecraft"
+}
+
 app.get('/login', (req, res) => {
 	let user = req.query.user
 	let pass = req.query.pass
 	if( user != "" && pass != ""){
-		res.send("entró");
+		//res.send("entró");
+		if(user == credenciales.user && pass == credenciales.password){
+			res.render('ticketera', {'usuario': user});
+		}
+		else{
+			res.render('login', {'fallido': "Usuario o contraseña incorrectos."});
+		}
 	}
 	else{
 		res.send("Usuario o contraseña vacíos");
@@ -39,7 +50,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/variable', (req, res) => {
-	res.render("variable", {"variable": 9999});
+	res.render("variable", {"numero": 9999});
 });
 
 app.get('/lista', (req, res) => {
@@ -70,8 +81,12 @@ app.get('/bucle', (req, res) => {
 					nombres: "Nicolás",
 					apellidos: "Moncada"
 				}
-			]	
+			]
 	}
+	console.log("arreglo.ayudantes: ",arreglo.ayudantes)
+
+	console.log("arreglo.ayudantes[0]: ",arreglo.ayudantes[0])
+	console.log("arreglo.ayudantes[0].nombres: ",arreglo.ayudantes[0].nombres)
 
 	res.render("bucle", {personas: arreglo});
 });
