@@ -38,6 +38,23 @@ app.get('/login', (req, res) => {
 	//console.log(req.query.user)
 });
 
+app.get('/variable', (req, res) => {
+	res.render("variable", {"variable": 9999});
+});
+
+app.get('/bucle', (req, res) => {
+
+	let arreglo = 
+	{
+		ayudante: 
+		{
+			nombres: "Sebastián Ignacio",
+			apellidos: "Riquelme Muñoz"
+		}
+	}
+	res.render("bucle", arreglo);
+});
+
 /*
 app.get("/ticketera", (req, res) => {
 	res.render("ticketera");
