@@ -46,13 +46,13 @@ app.get('/bucle', (req, res) => {
 
 	let arreglo = 
 	{
-		ayudante: 
-		{
-			nombres: "Sebastián Ignacio",
-			apellidos: "Riquelme Muñoz"
-		}
+		
+		nombres: "Sebastián Ignacio",
+		apellidos: "Riquelme Muñoz"
+
 	}
-	res.render("bucle", arreglo);
+
+	res.render("bucle", /*{ayudante: "Sebastián Riquelme"},*/ {arreglo: arreglo});
 });
 
 /*
