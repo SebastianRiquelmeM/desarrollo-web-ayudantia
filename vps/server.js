@@ -1,16 +1,18 @@
 import express from "express";
 import { engine } from 'express-handlebars'; // "express-handlebars"
+//import res from "express/lib/response";
 
 import * as path from "path";
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-console.log("__dirname: ", __dirname);
+//console.log("__dirname: ", __dirname);
 
 const app = express();
 
 app.engine("handlebars", engine());
 
+//Indico engine de mis views
 app.set("view engine", "handlebars");
 
 //Indico donde estan mis views
@@ -21,13 +23,26 @@ app.use(express.static(`${__dirname}/views`));
 
 
 app.get("/", (req, res) => {
-	res.render("home");
+	res.render("login");
 });
 
+app.get('/login', (req, res) => {
+	let user = req.query.user
+	let pass = req.query.pass
+	if( user != "" && pass != ""){
+		res.send("entró");
+	}
+	else{
+		res.send("Usuario o contraseña vacíos");
+	}
+	//console.log(req.query.user)
+});
+
+/*
 app.get("/ticketera", (req, res) => {
 	res.render("ticketera");
 });
-
+*/
 app.listen(3000, () => {
-	console.log("express-handlebars example server listening on: 3000");
+	console.log("Server express-handlebars corriendo en puerto: 3000");
 });
