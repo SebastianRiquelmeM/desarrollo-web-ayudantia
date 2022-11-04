@@ -1,5 +1,7 @@
 # 2 vps app con base de datos
 
+Tener en consideración que se debe crear la db para que funcione correctamente, pronto la dejaré aquí para que la usen.
+
 ## Base del proyecto
 
 Para este proyecto se usa como base
