@@ -57,3 +57,6 @@ Para ejecutar el proyecto, en el directorio actual usar:
 ```console
 npm start
 ```
+
+Luego entrar a [http://localhost:3000
+](http://localhost:3000) si está en un servidor remoto, puede reemplazar localhost por la IP de su servidor y debe tener el puerto 3000 abierto. También puede apuntar nginx como reverse proxy a la direccción anterior.
