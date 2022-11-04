@@ -34,14 +34,17 @@ app.use(express.json());
 //Para leer desde form HTML
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//Renderiza login.handlebars en la ruta principal
 app.get("/", (req, res) => {
 	res.render("login");
 });
 
+//Renderiza register.handlebars en la ruta /register
 app.get("/register", (req, res) => {
 	res.render("register");
 });
 
+//Ruta de ejemplo para una query a la database
 app.get("/api_get", async (req, res) => {
 	try {
 		const database = client.db("datos_db");
@@ -58,11 +61,8 @@ app.get("/api_get", async (req, res) => {
 	}
 });
 
-const credenciales = {
-	user: "Frez",
-	password: "minecraft",
-};
-
+//Ruta que recibe los datos del formulario html que está en login.handlebars
+//Se comunica con la daatabase para verificar usuario y contraseña
 app.post("/API/login", async (req, res) => {
 	console.log(req.body);
 	let user = req.body.user;
