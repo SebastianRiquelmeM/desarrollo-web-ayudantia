@@ -1,11 +1,13 @@
 import express from "express";
 import { engine } from "express-handlebars"; // "express-handlebars"
 import { MongoClient } from "mongodb";
+import bodyParser from "body-parser";
+
 //const { MongoClient } = require("mongodb");
 //import res from "express/lib/response";
 
 const uri =
-  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0";
+	"mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0";
 
 const client = new MongoClient(uri);
 
@@ -27,96 +29,130 @@ app.set("views", path.resolve(__dirname, "./views"));
 
 // serve all other static files like CSS, images, etc
 app.use(express.static(`${__dirname}/views`));
-
 app.use(express.json());
 
+//Para leer desde form HTML
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.get("/", (req, res) => {
-  res.render("login");
+	res.render("login");
+});
+
+app.get("/register", (req, res) => {
+	res.render("register");
 });
 
 app.get("/api_get", async (req, res) => {
-  try {
-    const database = client.db("datos_db");
-    const movies = database.collection("usuarios");
+	try {
+		const database = client.db("datos_db");
+		const movies = database.collection("usuarios");
 
-    const query = { usuario: "Seba" };
-    const usuario = await movies.findOne(query);
-    console.log(usuario);
+		const query = { usuario: "Seba" };
+		const usuario = await movies.findOne(query);
+		console.log(usuario);
 
-    res.send(usuario);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
+		res.send(usuario);
+	} finally {
+		// Ensures that the client will close when you finish/error
+		await client.close();
+	}
 });
 
 const credenciales = {
-  user: "Frez",
-  password: "minecraft",
+	user: "Frez",
+	password: "minecraft",
 };
 
-app.post("/login", (req, res) => {
-  console.log(req.body);
-  /* 	let user = req.query.user
-	let pass = req.query.pass
-	if( user != "" && pass != ""){
+app.post("/API/login", async (req, res) => {
+	console.log(req.body);
+	let user = req.body.user;
+	let pass = req.body.pass;
+
+	if (user != "" && pass != "") {
 		//res.send("entró");
-		if(user == credenciales.user && pass == credenciales.password){
-			res.render('ticketera', {'usuario': user});
+
+		try {
+			const database = client.db("datos_db");
+			const colection_usuarios = database.collection("usuarios");
+			const query = { usuario: user };
+			const usuario = await colection_usuarios.findOne(query);
+
+			if (usuario) {
+				// Si existe el usuario, comparamos la contraseña
+				// En la realidad, las contraseñas se manejan hasheadas...
+				// Pero aqui es a modo de ejemplo
+				if (usuario.password == pass) {
+					console.log("Login exitoso para el usuario ", user, "!");
+					res.render("ticketera", { usuario: user });
+				} else {
+					res.render("login", {
+						fallido: "Usuario o contraseña incorrectos.",
+					});
+				}
+			} else {
+				res.render("login", {
+					fallido: "Usuario o contraseña incorrectos.	",
+				});
+			}
+		} finally {
+			// Ensures that the client will close when you finish/error
+			//await client.close();
 		}
-		else{
-			res.render('login', {'fallido': "Usuario o contraseña incorrectos."});
-		}
+	} else {
+		res.render("login", {
+			fallido: "Usuario o contraseña vacíos.",
+		});
 	}
-	else{
-		res.send("Usuario o contraseña vacíos");
-	} */
-  //console.log(req.query.user)
-  //res.send("Usuario y contraseña recibidos");
-  res.status(200).json({ success: true });
 });
 
-app.post("/register", async (req, res) => {
-  console.log(req.body);
+app.post("/API/register", async (req, res) => {
+	console.log(req.body);
 
-  const user = req.body.user;
-  const password = req.body.password;
-  const nombre = req.body.nombre;
-  const rango = req.body.rango;
+	const user = req.body.user;
+	const password = req.body.password;
+	const nombre = req.body.nombre;
+	const rango = req.body.rango;
 
-  if (user != "" && password != "" && nombre != "" && rango != "") {
-    try {
-      const database = client.db("datos_db");
-      const movies = database.collection("usuarios");
+	if (user != "" && password != "" && nombre != "" && rango != "") {
+		try {
+			const database = client.db("datos_db");
+			const movies = database.collection("usuarios");
 
-      const query = { usuario: user };
-      const usuario = await movies.findOne(query);
-      console.log(usuario);
-      console.log(typeof usuario);
-      if (usuario) {
-        console.log(typeof usuario);
-      } else {
-        try {
-          const database = client.db("datos_db");
-          const haiku = database.collection("usuarios");
-          // create a document to insert
-          const doc = req.body;
+			const query = { usuario: user };
+			const usuario = await movies.findOne(query);
 
-          const result = await haiku.insertOne(doc);
-          console.log(
-            `A document was inserted with the _id: ${result.insertedId}`
-          );
-        } finally {
-          await client.close();
-        }
-      }
-    } finally {
-      // Ensures that the client will close when you finish/error
-      await client.close();
-    }
-  }
+			if (usuario) {
+				res.render("register", {
+					fallido: "El usuario ya está registrado.",
+				});
+			} else {
+				try {
+					const database = client.db("datos_db");
+					const haiku = database.collection("usuarios");
+					// create a document to insert
+					const doc = req.body;
 
-  res.status(200).json({ success: true });
+					const result = await haiku.insertOne(doc);
+					console.log(
+						`El documento de usuario ha sido insertado con el _id: ${result.insertedId}`
+					);
+					res.render("login", {
+						fallido:
+							"Se ha registrado con éxito! Inicie sesión para continuar",
+					});
+				} finally {
+					await client.close();
+				}
+			}
+		} finally {
+			// Ensures that the client will close when you finish/error
+			await client.close();
+		}
+	} else {
+		res.render("register", {
+			fallido: "No pueden haber datos vacíos.",
+		});
+	}
 });
 
 /*
@@ -125,5 +161,5 @@ app.get("/ticketera", (req, res) => {
 });
 */
 app.listen(3000, () => {
-  console.log("Server express-handlebars corriendo en puerto: 3000");
+	console.log("Server express-handlebars corriendo en puerto: 3000");
 });

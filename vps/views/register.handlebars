@@ -7,12 +7,26 @@
 			<h3><ion-icon
 					class="mt-4 mb-3"
 					id="icon"
-					name="person-outline"
+					name="person-add-outline"
 				></ion-icon></h3>
 		</div>
 
 		<!-- Login Form -->
-		<form action="/API/login" method="post">
+		<form action="/API/register" method="post">
+			<input
+				type="text"
+				id="name"
+				class="fadeIn second"
+				name="name"
+				placeholder="Nombre"
+			/>
+			<input
+				type="text"
+				id="name"
+				class="fadeIn second"
+				name="rango"
+				placeholder="Rango"
+			/>
 			<input
 				type="text"
 				id="login"
@@ -27,13 +41,21 @@
 				name="pass"
 				placeholder="Contraseña"
 			/>
-			<input type="submit" class="fadeIn fourth" value="Iniciar sesión" />
+			<input
+				type="text"
+				id="password2"
+				class="fadeIn third"
+				name="pass2"
+				placeholder="Repetir contraseña"
+			/>
+			<input type="submit" class="fadeIn fourth" value="Registrarse" />
 			<p>{{fallido}}</p>
 		</form>
 
 		<!-- Remind Passowrd -->
 		<div id="formFooter">
-			<a class="underlineHover" href="/register">¿No esta registrado?</a>
+			<a class="underlineHover" href="/">¿Ya está registrado? Iniciar
+				sesión</a>
 		</div>
 
 		<style>
@@ -114,6 +136,15 @@
 			OTHERS */ *:focus { outline: none; } #icon { width:60%; }
 
 		</style>
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
 
 	</div>
 </div>
