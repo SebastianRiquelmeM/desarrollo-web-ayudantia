@@ -95,6 +95,7 @@ app.post("/API/login", async (req, res) => {
 				});
 			}
 		} finally {
+			//Esto lanzaba un error cuando habian credenciales incorrectas más de 1 vez
 			// Ensures that the client will close when you finish/error
 			//await client.close();
 		}
