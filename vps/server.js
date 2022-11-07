@@ -2,6 +2,7 @@ import express from "express";
 import { engine } from "express-handlebars"; // "express-handlebars"
 import { MongoClient } from "mongodb";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 //const { MongoClient } = require("mongodb");
 //import res from "express/lib/response";
@@ -34,6 +35,8 @@ app.use(express.json());
 //Para leer desde form HTML
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(cookieParser());
+
 //Renderiza login.handlebars en la ruta principal
 app.get("/", (req, res) => {
 	res.render("login");
@@ -42,6 +45,88 @@ app.get("/", (req, res) => {
 //Renderiza register.handlebars en la ruta /register
 app.get("/register", (req, res) => {
 	res.render("register");
+});
+
+app.get("/lists", (req, res) => {
+	const data = [
+		{
+			_id: "636841694db786284b93cdfd",
+			nombre: "Llollapalooza 2023",
+			imagen: "./img/products/lollapalooza.jpg",
+			descripcion: "",
+			fechas: ["2023-03-17", "2023-03-18", "2023-03-19"],
+			precio: 120000,
+			ubicacion: "Parque bicentenario Cerrillos",
+			hora_inicio: "11:00",
+			hora_termino: "",
+		},
+		{
+			_id: "636844324db786284b93cdff",
+			nombre: "Primavera Sound",
+			imagen: "./img/products/primaverasoundsantiago.jpg",
+			descripcion: "",
+			fechas: ["2022-11-07", "2022-11-08", "2022-11-09"],
+			precio: 90000,
+			ubicacion: "Parque bicentenario Cerrillos",
+			hora_inicio: "11:00",
+			hora_termino: "21:00",
+		},
+		{
+			_id: "636848f14db786284b93ce05",
+			nombre: "Meet Vincent Van Gogh",
+			imagen: "./img/products/vangogh.jpg",
+			descripcion: "",
+			fechas: ["2023-06-17", "2023-06-18", "2023-06-19"],
+			precio: 24000,
+			ubicacion: "Parque bicentenario Vitacura",
+			hora_inicio: "10:00",
+			hora_termino: "16:00",
+		},
+	];
+	//console.log(data);
+	res.render("lists", { lista: data });
+});
+
+app.get("/ticketera", async (req, res) => {
+	//Consultamos datos a la db
+	if (req.cookies.session) {
+		try {
+			const database = client.db("datos_db");
+			const collection = database.collection("eventos");
+			//const query = "";
+			//const eventos = await collection.find({});
+			//console.log(eventos.toArray());
+
+			collection.find({}).toArray(function (err, result) {
+				if (err) {
+					console.log(err);
+				} else {
+					//console.log(JSON.stringify(result));
+					console.log("Query exitosa a la db");
+					//let datos = JSON.stringify(result);
+					//console.log("result: ", result);
+					//console.log("JSON.parse(result): ", JSON.parse(result));
+					/* 					console.log(
+						"JSON.parse(JSON.stringify(result)): ",
+						JSON.parse(JSON.stringify(result))
+					); */
+					//let datos = JSON.parse(result);
+					//console.log(datos);
+					res.render("ticketera", {
+						usuario: req.cookies.session,
+						eventos: result,
+					});
+				}
+			});
+
+			//res.send(usuario);
+		} finally {
+			// Ensures that the client will close when you finish/error
+			//await client.close();
+		}
+	} else {
+		res.redirect("/login");
+	}
 });
 
 //Ruta de ejemplo para una query a la database
@@ -57,7 +142,7 @@ app.get("/api_get", async (req, res) => {
 		res.send(usuario);
 	} finally {
 		// Ensures that the client will close when you finish/error
-		await client.close();
+		//await client.close();
 	}
 });
 
@@ -83,7 +168,9 @@ app.post("/API/login", async (req, res) => {
 				// Pero aqui es a modo de ejemplo
 				if (usuario.password == pass) {
 					console.log("Login exitoso para el usuario ", user, "!");
-					res.render("ticketera", { usuario: user });
+					//res.render("ticketera", { usuario: user });
+					res.cookie("session", user);
+					res.redirect("/ticketera");
 				} else {
 					res.render("login", {
 						fallido: "Usuario o contraseña incorrectos.",
