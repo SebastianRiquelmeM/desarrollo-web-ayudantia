@@ -121,7 +121,7 @@
 							type="button"
 							class="btn btn-light"
 							data-toggle="modal"
-							data-target="#modalVerFechas"
+							data-target="#modalVerFechas{{this._id}}"
 						>Ver fechas</button>
 					</div>
 				</div>
@@ -174,227 +174,64 @@
 			</div> }}
 		</div>
 	</div>
-
-	<div
-		class="modal fade"
-		id="modalVerFechas"
-		tabindex="-1"
-		aria-labelledby="exampleModalLabel"
-		aria-hidden="true"
-	>
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Fechas</h5>
-					<button
-						type="button"
-						class="close"
-						data-dismiss="modal"
-						aria-label="Close"
-					>
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<img
-						src="./img/products/lollapalooza.jpg"
-						class="card-img-top"
-						alt="..."
-					/>
-					<div id="fechas" class="card" style="">
-						<ul class="list-group list-group-flush">
-
-							<li class="list-group-item">
-
-								<div class="container">
-									<div class="row">
-										<div class="col-sm">
-											<h4>AUG</h4>
-											<h4>204</h4>
-										</div>
-										<div class="col-sm">
-											<p
-												id="titulo_fecha"
-												class="text-right"
-											>Teatro Tapia</p>
-										</div>
-									</div>
-								</div>
-
-							</li>
-							<li class="list-group-item">A second item</li>
-							<li class="list-group-item">A third item</li>
-						</ul>
+	{{#each eventos}}
+		<div
+			class="modal fade"
+			id="modalVerFechas{{this._id}}"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5
+							class="modal-title"
+							id="exampleModalLabel"
+						>Fechas</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<img
+							src="{{this.imagen}}"
+							class="card-img-top"
+							alt="..."
+						/>
+						<div id="fechas" class="card" style="">
+							<ul class="list-group list-group-flush">
+								{{#each this.fechas}}
+									<li class="list-group-item">
+										{{this}}
+										<a
+											type="button"
+											class="btn btn-danger ml-5"
+											href="/asientos/636841694db786284b93cdfd"
+										>Comprar asientos</a>
+									</li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-dismiss="modal"
+						>Cerrar</button>
+						<button
+							type="button"
+							class="btn btn-primary"
+						>Enviar</button>
 					</div>
 				</div>
-				<div class="modal-footer">
-					<button
-						type="button"
-						class="btn btn-secondary"
-						data-dismiss="modal"
-					>Cerrar</button>
-					<button
-						type="button"
-						class="btn btn-primary"
-					>Enviar</button>
-				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Modal -->
-	<div
-		class="modal fade"
-		id="modalIniciarSesion"
-		tabindex="-1"
-		aria-labelledby="exampleModalLabel"
-		aria-hidden="true"
-	>
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Iniciar
-						sesión</h5>
-					<button
-						type="button"
-						class="close"
-						data-dismiss="modal"
-						aria-label="Close"
-					>
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Correo electrónico</label>
-							<input
-								type="email"
-								class="form-control"
-								id="exampleInputEmail1"
-								aria-describedby="emailHelp"
-							/>
-							<small
-								id="emailHelp"
-								class="form-text text-muted"
-							></small>
-						</div>
-						<div class="form-group">
-							<label
-								for="exampleInputPassword1"
-							>Contraseña</label>
-							<input
-								type="password"
-								class="form-control"
-								id="exampleInputPassword1"
-							/>
-						</div>
-						<div class="form-group form-check">
-							<input
-								type="checkbox"
-								class="form-check-input"
-								id="exampleCheck1"
-							/>
-							<label
-								class="form-check-label"
-								for="exampleCheck1"
-							>Recuerdame</label>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button
-						type="button"
-						class="btn btn-secondary"
-						data-dismiss="modal"
-					>Cerrar</button>
-					<button
-						type="button"
-						class="btn btn-primary"
-					>Enviar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal -->
-	<div
-		class="modal fade"
-		id="modalRegistro"
-		tabindex="-1"
-		aria-labelledby="exampleModalLabel"
-		aria-hidden="true"
-	>
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Registro</h5>
-					<button
-						type="button"
-						class="close"
-						data-dismiss="modal"
-						aria-label="Close"
-					>
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Nombre</label>
-							<input
-								type="text"
-								class="form-control"
-								id="exampleName"
-							/>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Correo electrónico</label>
-							<input
-								type="email"
-								class="form-control"
-								id="exampleInputEmail1"
-								aria-describedby="emailHelp"
-							/>
-							<small
-								id="emailHelp"
-								class="form-text text-muted"
-							></small>
-						</div>
-						<div class="form-group">
-							<label
-								for="exampleInputPassword1"
-							>Contraseña</label>
-							<input
-								type="password"
-								class="form-control"
-								id="exampleInputPassword1"
-							/>
-						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">Confirmar
-								contraseña</label>
-							<input
-								type="password"
-								class="form-control"
-								id="exampleInputPassword1"
-							/>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button
-						type="button"
-						class="btn btn-secondary"
-						data-dismiss="modal"
-					>Cerrar</button>
-					<button
-						type="button"
-						class="btn btn-primary"
-					>Enviar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	{{/each}}
 </body>

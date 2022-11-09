@@ -3,6 +3,7 @@ import { engine } from "express-handlebars"; // "express-handlebars"
 import { MongoClient } from "mongodb";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+//import ObjectId from "mongodb";
 
 //const { MongoClient } = require("mongodb");
 //import res from "express/lib/response";
@@ -45,6 +46,16 @@ app.get("/", (req, res) => {
 //Renderiza register.handlebars en la ruta /register
 app.get("/register", (req, res) => {
 	res.render("register");
+});
+
+app.get("/asientos/:id", (req, res) => {
+	console.log(req.params.id);
+	const lista_asientos = [];
+	for (let i = 0; i < 50; i++) {
+		lista_asientos[i] = i + 1;
+	}
+	console.log(lista_asientos);
+	res.render("asientos", { lista_asientos: lista_asientos });
 });
 
 app.get("/lists", (req, res) => {
