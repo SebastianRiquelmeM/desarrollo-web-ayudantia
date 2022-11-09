@@ -93,25 +93,12 @@ app.get("/ticketera", async (req, res) => {
 		try {
 			const database = client.db("datos_db");
 			const collection = database.collection("eventos");
-			//const query = "";
-			//const eventos = await collection.find({});
-			//console.log(eventos.toArray());
-
 			collection.find({}).toArray(function (err, result) {
 				if (err) {
 					console.log(err);
 				} else {
-					//console.log(JSON.stringify(result));
 					console.log("Query exitosa a la db");
-					//let datos = JSON.stringify(result);
-					//console.log("result: ", result);
-					//console.log("JSON.parse(result): ", JSON.parse(result));
-					/* 					console.log(
-						"JSON.parse(JSON.stringify(result)): ",
-						JSON.parse(JSON.stringify(result))
-					); */
-					//let datos = JSON.parse(result);
-					//console.log(datos);
+
 					res.render("ticketera", {
 						usuario: req.cookies.session,
 						eventos: result,
