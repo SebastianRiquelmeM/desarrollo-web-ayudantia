@@ -1,15 +1,27 @@
 <h1>Test con listas</h1>
 
 //Imprime en console.log lo que hay en la variable this
-{{#each lista}}
+{{!-- {{#each lista}}
 	{{log this}}
 {{/each}}
-
+ --}}
 <h2>Imprime elementos de una lista de objetos: </h2>
 
 {{#each lista}}
 	<p>{{this.nombre}}</p>
 	{{#each this.fechas}}
-		<p class="ml-5">{{this}}</p>
+		<p class="ml-5">{{../this.nombre}}{{this}}</p>
 	{{/each}}
 {{/each}}
+
+{{!-- <h2>Probando con with: </h2>
+{{#with lista}}
+	<p>{{nombre}}</p>
+{{/with}} --}}
+
+{{!-- {{#with lista as |lista|}}
+	{{#with lista.fechas as |fechas|}}
+		{{log lista.nombre}}:
+		{{log fechas}}
+	{{/with}}
+{{/with}} --}}

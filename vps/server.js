@@ -98,6 +98,17 @@ app.get("/lists", (req, res) => {
 	res.render("lists", { lista: data });
 });
 
+app.get("/with", (req, res) => {
+	const data = {
+		person: {
+			firstname: "Yehuda",
+			lastname: "Katz",
+		},
+	};
+	//console.log(data);
+	res.render("with", { lista: data });
+});
+
 app.get("/ticketera", async (req, res) => {
 	//Consultamos datos a la db
 	if (req.cookies.session) {

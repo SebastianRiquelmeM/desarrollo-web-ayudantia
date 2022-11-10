@@ -212,7 +212,10 @@
 										<a
 											type="button"
 											class="btn btn-danger ml-5"
-											href="/asientos/636841694db786284b93cdfd"
+											{{!-- href="/asientos/636841694db786284b93cdfd" 
+											El ../ es para hacer referencia al each de más afuera
+											--}}
+											href="/asientos/{{../this._id}}"
 										>Comprar asientos</a>
 									</li>
 								{{/each}}
