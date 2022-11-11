@@ -1,9 +1,0 @@
-{
-  "_id": {
-    "$oid": "6358ab8b72c10936c13bd281"
-  },
-  "usuario": "Frez",
-  "password": "minecraft",
-  "nombre": "Jonathan Frez",
-  "Rango": "OP"
-}

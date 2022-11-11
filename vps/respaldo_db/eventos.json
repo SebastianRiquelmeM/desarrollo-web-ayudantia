@@ -1,0 +1,1885 @@
+[{
+  "_id": {
+    "$oid": "636841694db786284b93cdfd"
+  },
+  "nombre": "Llollapalooza 2023",
+  "imagen": "./img/products/lollapalooza.jpg",
+  "descripcion": "",
+  "fechas": [
+    {
+      "fecha": "2023-03-17",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 1
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2023-03-18",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2023-03-19",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    }
+  ],
+  "precio": 120000,
+  "ubicacion": "Parque bicentenario Cerrillos",
+  "hora_inicio": "11:00",
+  "hora_termino": ""
+},{
+  "_id": {
+    "$oid": "636844324db786284b93cdff"
+  },
+  "nombre": "Primavera Sound",
+  "imagen": "./img/products/primaverasoundsantiago.jpg",
+  "descripcion": "",
+  "fechas": [
+    {
+      "fecha": "2022-11-07",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2022-11-08",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2022-11-09",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    }
+  ],
+  "precio": 90000,
+  "ubicacion": "Parque bicentenario Cerrillos",
+  "hora_inicio": "11:00",
+  "hora_termino": "21:00"
+},{
+  "_id": {
+    "$oid": "636848f14db786284b93ce05"
+  },
+  "nombre": "Meet Vincent Van Gogh",
+  "imagen": "./img/products/vangogh.jpg",
+  "descripcion": "",
+  "fechas": [
+    {
+      "fecha": "2022-11-07",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2022-11-08",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    },
+    {
+      "fecha": "2022-11-09",
+      "asientos": [
+        {
+          "numero": 1,
+          "vendido": 0
+        },
+        {
+          "numero": 2,
+          "vendido": 0
+        },
+        {
+          "numero": 3,
+          "vendido": 0
+        },
+        {
+          "numero": 4,
+          "vendido": 0
+        },
+        {
+          "numero": 5,
+          "vendido": 0
+        },
+        {
+          "numero": 6,
+          "vendido": 0
+        },
+        {
+          "numero": 7,
+          "vendido": 0
+        },
+        {
+          "numero": 8,
+          "vendido": 0
+        },
+        {
+          "numero": 9,
+          "vendido": 0
+        },
+        {
+          "numero": 10,
+          "vendido": 0
+        },
+        {
+          "numero": 11,
+          "vendido": 0
+        },
+        {
+          "numero": 12,
+          "vendido": 0
+        },
+        {
+          "numero": 13,
+          "vendido": 0
+        },
+        {
+          "numero": 14,
+          "vendido": 0
+        },
+        {
+          "numero": 15,
+          "vendido": 0
+        },
+        {
+          "numero": 16,
+          "vendido": 0
+        },
+        {
+          "numero": 17,
+          "vendido": 0
+        },
+        {
+          "numero": 18,
+          "vendido": 0
+        },
+        {
+          "numero": 19,
+          "vendido": 0
+        },
+        {
+          "numero": 20,
+          "vendido": 0
+        },
+        {
+          "numero": 21,
+          "vendido": 0
+        },
+        {
+          "numero": 22,
+          "vendido": 0
+        },
+        {
+          "numero": 23,
+          "vendido": 0
+        },
+        {
+          "numero": 24,
+          "vendido": 0
+        },
+        {
+          "numero": 25,
+          "vendido": 0
+        },
+        {
+          "numero": 26,
+          "vendido": 0
+        },
+        {
+          "numero": 27,
+          "vendido": 0
+        },
+        {
+          "numero": 28,
+          "vendido": 0
+        },
+        {
+          "numero": 29,
+          "vendido": 0
+        },
+        {
+          "numero": 30,
+          "vendido": 0
+        },
+        {
+          "numero": 31,
+          "vendido": 0
+        },
+        {
+          "numero": 32,
+          "vendido": 0
+        },
+        {
+          "numero": 33,
+          "vendido": 0
+        },
+        {
+          "numero": 34,
+          "vendido": 0
+        },
+        {
+          "numero": 35,
+          "vendido": 0
+        },
+        {
+          "numero": 36,
+          "vendido": 0
+        },
+        {
+          "numero": 37,
+          "vendido": 0
+        },
+        {
+          "numero": 38,
+          "vendido": 0
+        },
+        {
+          "numero": 39,
+          "vendido": 0
+        },
+        {
+          "numero": 40,
+          "vendido": 0
+        },
+        {
+          "numero": 41,
+          "vendido": 0
+        },
+        {
+          "numero": 42,
+          "vendido": 0
+        },
+        {
+          "numero": 43,
+          "vendido": 0
+        },
+        {
+          "numero": 44,
+          "vendido": 0
+        },
+        {
+          "numero": 45,
+          "vendido": 0
+        },
+        {
+          "numero": 46,
+          "vendido": 0
+        },
+        {
+          "numero": 47,
+          "vendido": 0
+        },
+        {
+          "numero": 48,
+          "vendido": 0
+        },
+        {
+          "numero": 49,
+          "vendido": 0
+        },
+        {
+          "numero": 50,
+          "vendido": 0
+        }
+      ]
+    }
+  ],
+  "precio": 24000,
+  "ubicacion": "Parque bicentenario Vitacura",
+  "hora_inicio": "10:00",
+  "hora_termino": "16:00"
+}]

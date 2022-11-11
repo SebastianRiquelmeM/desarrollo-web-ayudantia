@@ -3,10 +3,6 @@ import { engine } from "express-handlebars"; // "express-handlebars"
 import { MongoClient, ObjectID } from "mongodb";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-//import ObjectId from "mongodb";
-
-//const { MongoClient } = require("mongodb");
-//import res from "express/lib/response";
 
 const uri =
 	"mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0";
@@ -110,7 +106,7 @@ app.get("/ticketera", async (req, res) => {
 					console.log(err);
 				} else {
 					console.log("Query exitosa a la db");
-
+					console.log(result);
 					res.render("ticketera", {
 						usuario: req.cookies.session,
 						eventos: result,
@@ -129,21 +125,28 @@ app.get("/ticketera", async (req, res) => {
 });
 
 app.get("/asientos/:id/:fecha", async (req, res) => {
-	//console.log(req.params);
-	try {
-		const database = client.db("datos_db");
-		const movies = database.collection("eventos");
+	console.log(req.params);
+	if (req.params.fecha == "Roboto-Regular.ttf") {
+		console.log("Dato incorrecto para fecha: ", req.params.fecha);
+	} else {
+		try {
+			const database = client.db("datos_db");
+			const movies = database.collection("eventos");
 
-		const query = { _id: new ObjectID(req.params.id) };
-		const result = await movies.findOne(query);
-		//console.log(result.fechas[0].asientos);
-		res.render("asientos", {
-			evento: result,
-			asientos: result.fechas[0].asientos,
-		});
-	} finally {
-		// Ensures that the client will c	lose when you finish/error
-		//await client.close();
+			const query = { _id: new ObjectID(req.params.id) };
+			const result = await movies.findOne(query);
+			//console.log(result.fechas[0].asientos);
+			let indice_fecha = parseInt(req.params.fecha);
+			console.log("fecha: ", indice_fecha);
+			console.log(result.fechas[indice_fecha].asientos);
+			res.render("asientos", {
+				evento: result,
+				asientos: result.fechas[indice_fecha].asientos,
+			});
+		} finally {
+			// Ensures that the client will c	lose when you finish/error
+			//await client.close();
+		}
 	}
 });
 

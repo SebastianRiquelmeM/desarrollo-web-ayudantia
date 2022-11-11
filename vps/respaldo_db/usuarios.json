@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6358ab8b72c10936c13bd281"
+  },
+  "usuario": "Frez",
+  "password": "minecraft",
+  "nombre": "Jonathan Frez",
+  "Rango": "OP"
+},{
+  "_id": {
+    "$oid": "6358aca772c10936c13bd282"
+  },
+  "usuario": "Seba",
+  "password": "valorant",
+  "nombre": "Sebastián Riquelme",
+  "Rango": "OP"
+},{
+  "_id": {
+    "$oid": "63598b4c197fd3ab7f8997d3"
+  },
+  "usuario": "Nico",
+  "password": "valorant",
+  "nombre": "Nicolas Moncada",
+  "Rango": "OP"
+},{
+  "_id": {
+    "$oid": "63599628d80027a61cf4a975"
+  },
+  "user": "Juanito",
+  "password": "minecraft",
+  "nombre": "Juan Perez",
+  "rango": "No OP"
+}]
