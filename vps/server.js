@@ -1,6 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars"; // "express-handlebars"
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectID } from "mongodb";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 //import ObjectId from "mongodb";
@@ -46,16 +46,6 @@ app.get("/", (req, res) => {
 //Renderiza register.handlebars en la ruta /register
 app.get("/register", (req, res) => {
 	res.render("register");
-});
-
-app.get("/asientos/:id", (req, res) => {
-	console.log(req.params.id);
-	const lista_asientos = [];
-	for (let i = 0; i < 50; i++) {
-		lista_asientos[i] = i + 1;
-	}
-	console.log(lista_asientos);
-	res.render("asientos", { lista_asientos: lista_asientos });
 });
 
 app.get("/lists", (req, res) => {
@@ -135,6 +125,25 @@ app.get("/ticketera", async (req, res) => {
 		}
 	} else {
 		res.redirect("/login");
+	}
+});
+
+app.get("/asientos/:id/:fecha", async (req, res) => {
+	//console.log(req.params);
+	try {
+		const database = client.db("datos_db");
+		const movies = database.collection("eventos");
+
+		const query = { _id: new ObjectID(req.params.id) };
+		const result = await movies.findOne(query);
+		//console.log(result.fechas[0].asientos);
+		res.render("asientos", {
+			evento: result,
+			asientos: result.fechas[0].asientos,
+		});
+	} finally {
+		// Ensures that the client will c	lose when you finish/error
+		//await client.close();
 	}
 });
 

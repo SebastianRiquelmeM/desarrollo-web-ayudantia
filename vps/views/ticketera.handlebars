@@ -208,14 +208,14 @@
 							<ul class="list-group list-group-flush">
 								{{#each this.fechas}}
 									<li class="list-group-item">
-										{{this}}
+										{{this.fecha}}
 										<a
 											type="button"
 											class="btn btn-danger ml-5"
 											{{!-- href="/asientos/636841694db786284b93cdfd" 
 											El ../ es para hacer referencia al each de más afuera
 											--}}
-											href="/asientos/{{../this._id}}"
+											href="/asientos/{{../this._id}}/{{@index}}"
 										>Comprar asientos</a>
 									</li>
 								{{/each}}
