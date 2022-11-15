@@ -44,6 +44,25 @@ app.get("/register", (req, res) => {
 	res.render("register");
 });
 
+app.get("/updateDB", async (req, res) => {
+	try {
+		const database = client.db("datos_db");
+		const collection = database.collection("eventos");
+		//Dejé unos por default, pero ustedes pueden enviarle desde un form
+		//y usar req.params ...
+		//const filter = { _id: new ObjectID(req.params.id) };
+		const filter = { _id: new ObjectID("636841694db786284b93cdfd") };
+		const set = { $set: { "fechas.0.asientos.1.vendido": 1 } };
+		console.log("Ejecutando query");
+		const result = await collection.updateOne(filter, set);
+		console.log("RESULTADO: ", result);
+		res.send("Funcionando");
+	} finally {
+		// Ensures that the client will c	lose when you finish/error
+		//await client.close();
+	}
+});
+
 app.get("/lists", (req, res) => {
 	const data = [
 		{
