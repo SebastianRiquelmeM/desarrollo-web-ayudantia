@@ -1,62 +1,70 @@
-# 2 vps app con base de datos
+# Getting Started with Create React App
 
-Tener en consideración que se debe crear la db para que funcione correctamente, pronto la dejaré aquí para que la usen.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Base del proyecto
+## Available Scripts
 
-Para este proyecto se usa como base
-[express-handlebars
-](https://www.npmjs.com/package/express-handlebars).
+In the project directory, you can run:
 
-Además se añade mongoDB como base de datos, para instalar mongoDB usar los siguientes comandos:
+### `npm start`
 
-```console
-wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-sudo apt-get update
+### `npm test`
 
-echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-sudo apt-get update
+### `npm run build`
 
-sudo apt-get install libssl1.1
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-sudo rm /etc/apt/sources.list.d/focal-security.list
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-sudo apt-get install mongodb-org
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-sudo mkdir -p /data/db/
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-sudo chown `id -u` /data/db
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-sudo systemctl enable mongod.service
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-sudo systemctl status mongod.service
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-sudo systemctl start mongod.service
-```
+## Learn More
 
-También puede ver la guía oficial para ubuntu en [Install mongoDB
-](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/). Tenga en consideración que los comandos anteriores incluyen una solución a un error de dependencia faltante en ubuntu 22.04.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Instalar dependencias
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-En el directorio actual usar:
+### Code Splitting
 
-```console
-npm i
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Iniciar proyecto
+### Analyzing the Bundle Size
 
-Para ejecutar el proyecto, en el directorio actual usar:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-```console
-npm start
-```
+### Making a Progressive Web App
 
-Luego entrar a [http://localhost:3000
-](http://localhost:3000) si está en un servidor remoto, puede reemplazar localhost por la IP de su servidor y debe tener el puerto 3000 abierto. También puede apuntar nginx como reverse proxy a la direccción anterior.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
