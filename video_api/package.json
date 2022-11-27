@@ -1,0 +1,21 @@
+{
+  "name": "express-handlebars-basic-example",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.11.0"
+  }
+}

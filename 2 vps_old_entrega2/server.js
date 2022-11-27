@@ -15,9 +15,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 //console.log("__dirname: ", __dirname);
 
-
-
-
 const app = express();
 
 app.engine("handlebars", engine());
@@ -149,6 +146,7 @@ app.get("/ticketera", async (req, res) => {
 app.get("/asientos/:id/:fecha", async (req, res) => {
 	console.log(req.params);
 	if (req.params.fecha == "Roboto-Regular.ttf") {
+		res.send("");
 		console.log("Dato incorrecto para fecha: ", req.params.fecha);
 	} else {
 		try {
@@ -170,6 +168,11 @@ app.get("/asientos/:id/:fecha", async (req, res) => {
 			//await client.close();
 		}
 	}
+});
+
+app.post("/API/asientos", async (req, res) => {
+	console.log(req.body);
+	res.send("funcionando");
 });
 
 //Ruta de ejemplo para una query a la database
