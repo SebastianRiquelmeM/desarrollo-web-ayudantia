@@ -133,5 +133,5 @@ app.post("/API/user/:id", (req, res) => {
 });
 
 app.listen(3000, () => {
-	console.log("Server express-handlebars corriendo en puerto: 3000");
+	console.log("Server express corriendo en puerto: 3000");
 });
