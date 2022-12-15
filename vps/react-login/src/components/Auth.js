@@ -12,11 +12,14 @@ export const Auth = () => {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
-		try {
-			console.log(email, pass);
-		} catch (err) {
-			console.log(err);
-		}
+		const requestOptions = {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ user: email, password: pass }),
+		};
+		fetch("http://localhost:5000/API/login", requestOptions)
+			.then((response) => response.json())
+			.then((data) => console.log(data));
 	}
 	if (authMode === "signin") {
 		return (
@@ -34,9 +37,9 @@ export const Auth = () => {
 							</span>
 						</div>
 						<div className="form-group mt-3">
-							<label>Email address</label>
+							<label>usuario</label>
 							<input
-								type="email"
+								type="text"
 								className="form-control mt-1"
 								placeholder="Enter email"
 								value={email}
@@ -44,7 +47,7 @@ export const Auth = () => {
 							/>
 						</div>
 						<div className="form-group mt-3">
-							<label>Password</label>
+							<label>Contraseña</label>
 							<input
 								type="password"
 								className="form-control mt-1"
