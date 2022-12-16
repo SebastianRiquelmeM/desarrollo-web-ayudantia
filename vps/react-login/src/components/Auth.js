@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
 
 export const Auth = () => {
+	let navigate = useNavigate();
+	const cookies = new Cookies();
 	let [authMode, setAuthMode] = useState("signin");
 
 	const changeAuthMode = () => {
@@ -19,7 +23,15 @@ export const Auth = () => {
 		};
 		fetch("http://localhost:5000/API/login", requestOptions)
 			.then((response) => response.json())
-			.then((data) => console.log(data));
+			.then((data) => {
+				if (data.token) {
+					//setCookie("token", data.token);
+					cookies.set("token", data.token, { path: "/" });
+					console.log("Login correcto");
+					//navigate to events
+					navigate("/events");
+				}
+			});
 	}
 	if (authMode === "signin") {
 		return (
