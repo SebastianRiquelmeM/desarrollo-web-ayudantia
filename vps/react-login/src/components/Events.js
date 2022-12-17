@@ -1,6 +1,24 @@
 import React, { useState } from "react";
 import "../css/style.css";
+
 export const Events = () => {
+	//query events to http://localhost:5000/events and store it
+	//in array of events
+	const [events, setEvents] = useState([]);
+
+	//fetch events from http://localhost:5000/events
+	const fetchEvents = async () => {
+		const response = await fetch("http://localhost:5000/API/eventos");
+		const data = await response.json();
+		console.log(data.eventos);
+		setEvents(data.eventos);
+	};
+
+	//fetch events when component is mounted
+	React.useEffect(() => {
+		fetchEvents();
+	}, []);
+
 	return (
 		<div>
 			<meta charSet="UTF-8" />
@@ -166,30 +184,27 @@ export const Events = () => {
 					</div>
 				</div>
 				<div className="card-deck text-light ">
-					<div className="card shadow">
-						<img
-							/* src="./img/products/lollapalooza.jpg" */
-							src={require("../img/products/lollapalooza.jpg")}
-							className="card-img-top"
-							alt="..."
-						/>
-						<div className="card-body">
-							<h5 className="card-title">Lollapalooza 2022</h5>
-							<p className="card-text">
-								This is a longer card with supporting text below
-								as a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
-							<button
-								type="button"
-								className="btn btn-light"
-								data-toggle="modal"
-								data-target="#modalVerFechas"
-							>
-								Ver fechas
-							</button>
-						</div>
-					</div>
+					{events.map((event, index) => {
+						let image = "." + event.imagen;
+						console.log(image);
+						return (
+							<div key={index} className="card shadow">
+{/* 								<img
+									src={require(image)}
+									className="card-img-top"
+									alt="..."
+								/> */}
+								<div className="card-body">
+									<h5 className="card-title">
+										{event.nombre}
+									</h5>
+									<p className="card-text">
+										{event.ubicacion}
+									</p>
+								</div>
+							</div>
+						);
+					})}
 					<div className="card shadow">
 						<img
 							src={require("../img/products/primaverasoundsantiago.jpg")}
