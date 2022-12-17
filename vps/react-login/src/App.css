@@ -1,5 +1,5 @@
 .App {
-	background-color: white;
+	background-color: white !important;
 }
 
 .Auth-form-container {
@@ -16,7 +16,7 @@
 	padding-top: 30px;
 	padding-bottom: 20px;
 	border-radius: 8px;
-	background-color: white;
+	background-color: white !important;
 }
 
 .Auth-form-content {

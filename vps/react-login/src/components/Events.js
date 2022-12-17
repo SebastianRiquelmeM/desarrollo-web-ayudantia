@@ -189,8 +189,13 @@ export const Events = () => {
 						console.log(image);
 						return (
 							<div key={index} className="card shadow">
-{/* 								<img
-									src={require(image)}
+								<img
+									src={image}
+									className="card-img-top"
+									alt="..."
+								/>
+								{/* 								<img
+									src="img/products/primaverasoundsantiago.jpg"
 									className="card-img-top"
 									alt="..."
 								/> */}
@@ -205,38 +210,6 @@ export const Events = () => {
 							</div>
 						);
 					})}
-					<div className="card shadow">
-						<img
-							src={require("../img/products/primaverasoundsantiago.jpg")}
-							className="card-img-top"
-							alt="..."
-						/>
-						<div className="card-body">
-							<h5 className="card-title">
-								Primavera sound Santiago
-							</h5>
-							<p className="card-text">
-								This card has supporting text below as a natural
-								lead-in to additional content.
-							</p>
-						</div>
-					</div>
-					<div className="card shadow">
-						<img
-							src={require("../img/products/vangogh.jpg")}
-							className="card-img-top"
-							alt="..."
-						/>
-						<div className="card-body">
-							<h5 className="card-title">Meet Vicent Van Gogh</h5>
-							<p className="card-text">
-								This is a wider card with supporting text below
-								as a natural lead-in to additional content. This
-								card has even longer content than the first to
-								show that equal height action.
-							</p>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div
