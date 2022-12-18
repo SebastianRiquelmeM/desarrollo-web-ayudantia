@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "../css/style.css";
+import Cookies from "universal-cookie";
 
 export const Events = () => {
 	//query events to http://localhost:5000/events and store it
 	//in array of events
 	const [events, setEvents] = useState([]);
+	const cookies = new Cookies();
+	console.log("Entra a events");
+	console.log(cookies.get("token"));
 
 	//fetch events from http://localhost:5000/events
 	const fetchEvents = async () => {
 		const response = await fetch("http://localhost:5000/API/eventos");
 		const data = await response.json();
-		console.log(data.eventos);
+		//console.log(data.eventos);
 		setEvents(data.eventos);
 	};
 
@@ -186,7 +190,7 @@ export const Events = () => {
 				<div className="card-deck text-light ">
 					{events.map((event, index) => {
 						let image = "." + event.imagen;
-						console.log(image);
+						//console.log(image);
 						return (
 							<div key={index} className="card shadow">
 								<img
